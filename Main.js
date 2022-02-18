@@ -7,13 +7,7 @@ if (document.location.hostname.toLowerCase() != "play.kahoot.it") {
     .then(resp => resp.status == 200 ? resp.json() : alert(`Request failed with status code ${resp.status}`))
     .then(data => {
     	let answers = data.questions.map(question => [question.question, question.choices.map((choice, index) => {choice.position = index; return choice; }).filter(choice => choice.correct)]);
-        alert("Click on the page.\nData will be written to your clipboard.\nA new tab will open.\nRun the helper script and paste in the data on that tab.");
-	      window.cliploop = setInterval(async () => {
-            try {
-                await navigator.clipboard.writeText(JSON.stringify(answers));
-                clearInterval(window.cliploop);
-                window.open("https://kahoot.it/");
-            } catch {}
-	}, 1000);
+        alert("Copy this tab to your clipboard.\nGo to kahoot.it\nRun the helper script.\nPaste in the data");
+        document.write(JSON.stringify(answers));
     });
 }
