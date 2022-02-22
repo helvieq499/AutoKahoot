@@ -1,12 +1,13 @@
 # AutoKahoot
 Semi-automatic Kahoot solver
 
-# Installation
-You can add a bookmark starting with `javascript:` followed by the code
+# Usage
+You can enter `javascript:` into your URL bar and then paste in the code.
+- You can put this into a bookmarklet
 
 The minified code is prefered for this: [Main.min.js](https://cdn.jsdelivr.net/gh/helvieq499/AutoKahoot@master/Main.min.js) [Helper.min.js](https://cdn.jsdelivr.net/gh/helvieq499/AutoKahoot@master/Helper.min.js)
 
-# Usage
+# Instructions
 
 1. Run the Main script on [play.kahoot.me](https://play.kahoot.me/v2)
     - If you run it anywhere else, it will open another tab there
