@@ -5,7 +5,7 @@ Semi-automatic Kahoot solver
 You can enter `javascript:` into your URL bar and then paste in the code.
 - You can put this into a [bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
 
-The minified code is prefered for this: [Main.min.js](https://cdn.jsdelivr.net/gh/helvieq499/AutoKahoot@master/Main.min.js) [Helper.min.js](https://cdn.jsdelivr.net/gh/helvieq499/AutoKahoot@master/Helper.min.js)
+The minified code is prefered for this: [Main.min.js](https://cdn.jsdelivr.net/gh/helvieq499/AutoKahoot@master/AutoKahoot.min.js)
 
 # Instructions
 
