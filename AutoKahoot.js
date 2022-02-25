@@ -24,9 +24,12 @@ if (document.location.host.toLowerCase() == "kahoot.it") {
 
         fetch("https://play.kahoot.it/rest/kahoots/" + id)
         .then(resp => resp.status == 200 ? resp.json() : alert(`Request failed with status code ${resp.status}`))
-        .then(data => window.opener.postMessage(
-            data.questions.map(question => [question.question, question.choices.map((choice, index) => {choice.position = index; return choice; }).filter(choice => choice.correct)]),
-            "*"
-        ));
+        .then(data => {
+            window.opener.postMessage(
+                data.questions.map(question => [question.question, question.choices.map((choice, index) => {choice.position = index; return choice; }).filter(choice => choice.correct)]),
+                "*"
+            );
+            window.close();
+        });
     }
 } else alert("This can only be ran on kahoot.it");
